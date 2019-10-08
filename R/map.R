@@ -33,12 +33,19 @@ mapMake <- function(latP = 50.87959, lngP = 4.70093){
 mapAdd <- function(latP = 48.874065, lngP = 9.596336){
   require(magrittr)
   require(leaflet)
-  require(RMariaDB)
+  require(htmlwidgets)
+  require(widgetframe)
   ma <<- ma %>% addMarkers(lat = latP, lng = lngP)
   mapGet()
 }
 
 
 mapGet <- function(){
+  require(htmlwidgets)
+  require(widgetframe)
+
   ma
+
+  htmlwidgets::saveWidget(widgetframe::frameableWidget(ma),
+                          "mapfoto.html", selfcontained = TRUE)
 }
