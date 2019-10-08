@@ -4,6 +4,7 @@ mapMake <- function(latP = 50.87959, lngP = 4.70093){
   require(magrittr)
   require(leaflet)
   require(RMariaDB)
+  require(htmltools)
   ma <<- leaflet() %>%
     addTiles() %>%  # Add default OpenStreetMap map tiles
     setView(zoom=4, lat = latP, lng = lngP)
@@ -21,7 +22,7 @@ mapMake <- function(latP = 50.87959, lngP = 4.70093){
     sid <- res2[row, "SensorID"]
     latid <- res2[row, "Latitude"]
     longid <- res2[row, "Longitude"]
-    mapAdd(latid, longid)
+    mapAdd(latid, longid, sid)
   }
 
   dbClearResult(res)
@@ -30,12 +31,13 @@ mapMake <- function(latP = 50.87959, lngP = 4.70093){
   mapGet()
 }
 
-mapAdd <- function(latP = 48.874065, lngP = 9.596336){
+mapAdd <- function(latP = 48.874065, lngP = 9.596336, sid = 929){
   require(magrittr)
   require(leaflet)
   require(htmlwidgets)
   require(widgetframe)
-  ma <<- ma %>% addMarkers(lat = latP, lng = lngP)
+  sidString <- toString(sid)
+  ma <<- ma %>% addMarkers(lat = latP, lng = lngP, popup = sidString)
   mapGet()
 }
 
