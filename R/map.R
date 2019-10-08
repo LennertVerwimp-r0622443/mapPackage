@@ -1,6 +1,7 @@
 library(leaflet)
 
 mapMake <- function(latP = 50.87959, lngP = 4.70093){
+  require(magrittr)
   require(leaflet)
   ma <<- leaflet() %>%
     addTiles() %>%  # Add default OpenStreetMap map tiles
@@ -29,6 +30,7 @@ mapMake <- function(latP = 50.87959, lngP = 4.70093){
 }
 
 mapAdd <- function(latP = 48.874065, lngP = 9.596336){
+  require(magrittr)
   require(leaflet)
   ma <<- ma %>% addMarkers(lat = latP, lng = lngP)
   mapGet()
