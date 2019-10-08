@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1570536188860.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3705802116",
+    "id" : "CD5158A3",
+    "lastKnownWriteTime" : 1570536163,
+    "last_content_update" : 1570536163,
+    "path" : "D:/School/Informatica/AfstudeerProject/Gitrepo Packages/map/mapPackage/R/map.R",
+    "project_path" : "R/map.R",
+    "properties" : {
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
