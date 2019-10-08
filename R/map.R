@@ -1,5 +1,18 @@
 library(leaflet)
+getIDS <- function()
+{
+  require(RMariaDB)
+  con <- dbConnect(
+    drv = RMariaDB::MariaDB(),
+    db = 'Opencpu'
+  )
 
+  res <- dbSendQuery(con, "SELECT SensorID FROM Sensor;")
+  res2 <-dbFetch(res)
+  dbClearResult(res)
+  dbDisconnect(con)
+  res2
+}
 mapMake <- function(latP = 50.87959, lngP = 4.70093){
   require(magrittr)
   require(leaflet)
