@@ -64,3 +64,13 @@ mapGet <- function(){
   htmlwidgets::saveWidget(widgetframe::frameableWidget(ma),
                           "mapfoto.html", selfcontained = TRUE)
 }
+
+
+lime <- function(){
+  require(LimeRick)
+  require(knitr)
+  require(markdown)
+  require(ggradar)
+  knit("~/Survey2PDF.Rmd")
+  markdownToHTML('~/Survey2PDF.md', '~/Survey2PDF.html', options=c("use_xhml"))
+}
