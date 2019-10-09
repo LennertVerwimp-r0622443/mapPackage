@@ -71,7 +71,6 @@ lime <- function(){
   require(knitr)
   require(markdown)
   require(ggradar)
-  setwd("/home/wannes")
 
   knit("Survey2PDF.Rmd")
   markdownToHTML('Survey2PDF.md', 'Survey2PDF.html', options=c("use_xhml"))
