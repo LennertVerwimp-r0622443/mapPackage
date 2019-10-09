@@ -73,8 +73,7 @@ lime <- function(){
   require(ggradar)
   #return(getwd())
   setwd("/home/wannes")
-  return(getwd())
-  #knit("Survey2PDF.Rmd")
+  knit("Survey2PDF.Rmd")
   #markdownToHTML('Survey2PDF.md', 'Survey2PDF.html', options=c("use_xhml"))
 
   #return("Hello world")
