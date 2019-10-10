@@ -84,9 +84,10 @@ lime <- function(varID = 698148){
   require(scales)
   require(ggplot2)
   require(ggradar)
+  require(grDevices)
   suppressPackageStartupMessages(require(reshape2))
   require(knitr)
-  #require(mailR)
+  require(mailR)
   require(viridis)
 
   #############################################################
