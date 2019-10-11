@@ -1,4 +1,19 @@
 library(leaflet)
+getdata <- function(id=929)
+{
+  require(RMariaDB)
+  con <- dbConnect(
+    drv = RMariaDB::MariaDB(),
+    db = 'Opencpu'
+  )
+
+  querry <- paste0("Select Timestamp, Pressure from PressureData WHERE SensorID = ", id)
+  res <- dbSendQuery(con, querry)
+  res2 <-dbFetch(res)
+  return(res2)
+}
+
+
 getIDS <- function()
 {
   require(RMariaDB)
