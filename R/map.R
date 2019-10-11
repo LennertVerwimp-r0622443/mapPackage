@@ -74,7 +74,7 @@ lime <- function(varID = 698148){
 
   suppressPackageStartupMessages(require(extrafont))
   suppressPackageStartupMessages(require(extrafontdb))
-  suppressPackageStartupMessages(extrafont::loadfonts(device="win"))
+  #suppressPackageStartupMessages(extrafont::loadfonts(device="win"))
 
   suppressPackageStartupMessages(require(LimeRick, warn.conflicts = FALSE, quietly=TRUE))
   suppressPackageStartupMessages(require(dplyr))
@@ -95,7 +95,7 @@ lime <- function(varID = 698148){
 
 
   options(lsUser = 'ReadOnly')
-  options(lsPass = 'Kcirtap!')
+  options(lsPass = 'Wachtwoord')
   options(LimeRickStats = NULL)
 
   surveyID <- varID # VAdvies
